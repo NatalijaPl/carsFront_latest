@@ -8,7 +8,6 @@ import { AppLogin } from "./components/auth/AppLogin";
 import { AppRegister } from "./components/auth/AppRegister";
 import GuestRoute from "./components/common/GuestRoute";
 import { AddCar } from "./pages/AddCar";
-import { EditCar } from "./pages/EditCar";
 import CarShow from "./pages/CarShow";
 
 function App() {
@@ -20,9 +19,8 @@ function App() {
         </header>
         <Switch>
           <GuardedRoute component={AppCars} exact path="/cars" />
-          <GuardedRoute component={CarShow} path="/cars/:id" />
+          <GuardedRoute component={CarShow} path="/cars/:carId" />
           <GuardedRoute component={AddCar} path="/add" />
-          <GuardedRoute component={EditCar} path="/edit/:id" />
           <GuestRoute component={AppLogin} path="/login" />
           <GuestRoute component={AppRegister} path="/register" />
         </Switch>
