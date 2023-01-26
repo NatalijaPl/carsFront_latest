@@ -21,24 +21,26 @@ export const AppLogin = () => {
   };
   return (
     <div>
-      <h1>Login</h1>
+      <h2>login</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>email address</label>
+          <label>email address: </label>{" "}
           <input
             name="email"
             type="text"
             onChange={(e) => setData({ ...data, email: e.target.value })}
           />
         </div>
+        <br />
         <div>
-          <label>password</label>
+          <label>password: </label>{" "}
           <input
             name="password"
             type="password"
             onChange={(e) => setData({ ...data, password: e.target.value })}
           />
         </div>
+        <br />
         <button type="submit">login</button>
       </form>
     </div>
